@@ -1,0 +1,63 @@
+.footer {
+	padding: 34px 0 65px;
+	background-color: $colorSecondaryBlack;
+	color: rgba(255, 255, 255, 0.8);
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin: 0 0 56px;
+	}
+
+	&__logos {
+		display: flex;
+		gap: 50px;
+
+		svg {
+			width: 60px;
+			height: 60px;
+		}
+	}
+
+	.copyright {
+		text-align: center;
+		opacity: 0.6;
+	}
+
+	@media screen and (max-width: $mobile) {
+		padding: 63px 0 40px;
+
+		.logo {
+			margin: 0 0 30px;
+		}
+
+		&__wrapper {
+			flex-direction: column;
+			margin: 0 0 60px;
+
+			.nav {
+				display: block;
+				margin: 0 0 28px;
+
+				&__list {
+					flex-direction: column;
+					text-align: center;
+					gap: 12px;
+				}
+			}
+		}
+
+		&__logos {
+			flex-direction: column;
+            align-items: center;
+			gap: 15px;
+
+			svg {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+}

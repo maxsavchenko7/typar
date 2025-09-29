@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Radley&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/style.min.css" />
+		<title>Website name</title>
+	</head>
+	<body class="home">
+		<main class="content">
+			@@include('../components/header.html')
+
+            @@include('../components/ui/menu.html')
+
+            @@include('../components/sections/hero.html')
+
+            @@include('../components/sections/tech.html')
+
+			@@include('../components/sections/about.html')
+
+            @@include('../components/sections/advantages.html')
+
+            @@include('../components/sections/directions.html')
+
+			@@include('../components/sections/review.html')
+
+			@@include('../components/sections/quality.html')
+
+			@@include('../components/sections/usage.html')
+
+			@@include('../components/sections/results.html')
+
+			@@include('../components/sections/feedback.html')
+
+			@@include('../components/footer.html')
+
+			<div class="overlay">
+				@@include('../components/ui/popup-feedback.html')
+			</div>
+		</main>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="assets/js/bundle.js"></script>
+	</body>
+</html>

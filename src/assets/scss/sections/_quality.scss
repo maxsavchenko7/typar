@@ -1,0 +1,75 @@
+.quality {
+	&__wrapper {
+		background: url('../img/decor/quality-bg.jpg') no-repeat center / cover;
+		border-radius: $borderRadiusL;
+		padding: 15px;
+		text-align: center;
+	}
+
+	&__content {
+		width: 50%;
+		display: grid;
+		gap: 24px;
+		padding: 75px 45px 120px;
+
+		background-color: #fff;
+		border-radius: $borderRadiusL;
+
+		&-btns {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+		}
+	}
+
+	&__tag {
+		margin: 0 auto;
+	}
+
+	&__text {
+		max-width: 560px;
+		margin: 0 auto 24px;
+	}
+
+	@media screen and (max-width: 912px) {
+		&__content {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: $mobile) {
+		&__wrapper {
+			padding: 7px 7px;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			padding: 60px 0 50px;
+
+			&-btns {
+				flex-direction: column;
+				gap: 8px;
+
+                .btn--transparent {
+                    padding: 17px;
+                }
+			}
+		}
+
+		&__tag {
+			margin: 0 auto;
+		}
+
+		&__title {
+			font-size: 26px;
+			line-height: 30px;
+		}
+
+		&__text {
+            padding: 0 12px;
+		}
+	}
+}
