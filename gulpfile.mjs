@@ -9,6 +9,7 @@ import { deleteAsync } from 'del';
 import rename from 'gulp-rename';
 import gulpIf from 'gulp-if';
 import concat from 'gulp-concat';
+import ghPages from 'gulp-gh-pages';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const scss = gulpSass(sass);
@@ -30,7 +31,8 @@ const paths = {
         js: './dist/assets/js/',
         libsJs: './dist/assets/js/libs/',
         img: './dist/assets/img/',
-        fonts: './dist/assets/fonts/'
+        fonts: './dist/assets/fonts/',
+        all: './dist/**/*',
     }
 };
 
@@ -121,7 +123,13 @@ export function favicon() {
         .pipe(gulpBrowserSync.stream()) : Promise.resolve();
 }
 
+export function deployPages() {
+    return src(paths.dist.all)
+        .pipe(ghPages());
+}
+
 const build = series(clean, parallel(html, favicon, styles, libsCss, scripts, libsJs, img, fonts));
 const dev = series(build, parallel(watchFiles, browserSync));
+const deploy = deployPages;
 
-export { dev as default, build };
+export { dev as default, build, deploy };
