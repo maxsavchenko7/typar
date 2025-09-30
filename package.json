@@ -7,7 +7,8 @@
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development gulp",
 		"build": "cross-env NODE_ENV=production gulp build",
-		"deploy": "cross-env NODE_ENV=production gulp deploy"
+		"deploy": "cross-env NODE_ENV=production gulp deploy",
+		"netlify": "gulp build"
 	},
 	"author": "heeelk",
 	"license": "ISC",
