@@ -130,6 +130,6 @@ export function deployPages() {
 
 const build = series(clean, parallel(html, favicon, styles, libsCss, scripts, libsJs, img, fonts));
 const dev = series(build, parallel(watchFiles, browserSync));
-const deploy = deployPages;
+const deploy = series(build, deployPages);
 
 export { dev as default, build, deploy };
