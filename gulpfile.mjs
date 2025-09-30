@@ -128,7 +128,7 @@ export function deployPages() {
         .pipe(ghPages());
 }
 
-const build = series(clean, parallel(html, favicon, styles, scripts, img, fonts));
+const build = series(clean, parallel(html, favicon, styles, scripts, img));
 const dev = series(build, parallel(watchFiles, browserSync));
 const deploy = series(build, deployPages);
 
